@@ -14,7 +14,7 @@ int main(void){
     "shr eax;"          //przesuniecie bitowe w prawo
     "jnc skok2;"        //instrukcja warunkowa
     "skok:"
-      "add ebx, 1;"
+      "inc ebx;"
     "skok2:"
       "mov %0, ebx;"
     ".att_syntax prefix"
