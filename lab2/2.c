@@ -12,8 +12,7 @@ int main(void){
     "mov eax, %1;"
     "mov ebx, 0;"
     "shr eax;"          //przesuniecie bitowe w prawo
-    "jc skok;"          //instrukcja warunkowa
-    "jmp skok2;"
+    "jnc skok2;"        //instrukcja warunkowa
     "skok:"
       "add ebx, 1;"
     "skok2:"
