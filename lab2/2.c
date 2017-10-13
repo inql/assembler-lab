@@ -12,15 +12,15 @@ int main(void){
     "mov eax, %1;"
     "xor ebx, ebx;"     //zerowanie zmiennej za pomoca XOR'a
     "xor ecx, ecx;"
-    "petla:"
+    "petla:"            //stworz etykiete petla
       "shr eax;"          //przesuniecie bitowe w prawo
-      "jnc skok2;"        //instrukcja warunkowa
+      "jnc skok2;"        //instrukcja warunkowa - jesli flaga c nie jest zapalona przejdz do skok2
       "skok:"
-        "inc ebx;"
+        "inc ebx;"        //inkrementacja ebx
       "skok2:"
         "inc ecx;"
-        "cmp ecx,32;"
-        "jnz petla;"
+        "cmp ecx,32;"     //porownaj licznik z liczba 32
+        "jnz petla;"      //jesli flaga z nie jest zapalona przejdz do petla
       "mov %0, ebx;"
     ".att_syntax prefix"
     :"=r"(y)
