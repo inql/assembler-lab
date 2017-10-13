@@ -14,10 +14,9 @@ int main(void){
     "xor ecx, ecx;"
     "petla:"            //stworz etykiete petla
       "shr eax;"          //przesuniecie bitowe w prawo
-      "jnc skok2;"        //instrukcja warunkowa - jesli flaga c nie jest zapalona przejdz do skok2
+      "jnc skok;"         //instrukcja warunkowa - jesli flaga c nie jest zapalona przejdz do skok
+      "inc ebx;"          //inkrementacja ebx
       "skok:"
-        "inc ebx;"        //inkrementacja ebx
-      "skok2:"
         "inc ecx;"
         "cmp ecx,32;"     //porownaj licznik z liczba 32
         "jnz petla;"      //jesli flaga z nie jest zapalona przejdz do petla
