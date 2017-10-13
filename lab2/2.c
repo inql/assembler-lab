@@ -10,7 +10,7 @@ int main(void){
     ".intel_syntax noprefix;"
 
     "mov eax, %1;"
-    "mov ebx, 0;"
+    "xor ebx, ebx;"
     "shr eax;"          //przesuniecie bitowe w prawo
     "jnc skok2;"        //instrukcja warunkowa
     "skok:"
