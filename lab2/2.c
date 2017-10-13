@@ -16,7 +16,8 @@ int main(void){
       "jnc skok;"         //instrukcja warunkowa - jesli flaga c nie jest zapalona przejdz do skok
       "inc ebx;"          //inkrementacja ebx
       "skok:"
-        "cmp eax,0;"      //porownaj eax z 0
+        //"cmp eax,0;"      //porownaj eax z 0
+        "and eax,eax;"      //porownanie eax z 0 za pomoca AND
         "jnz petla;"      //jesli flaga z nie jest zapalona przejdz do petla
       "mov %0, ebx;"
     ".att_syntax prefix"
