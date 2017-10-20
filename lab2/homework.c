@@ -4,7 +4,7 @@ Program obliczajacy ilosc wystapien bitow 101 w liczbie
 #include <stdio.h>
 
 int main(void){
-  int x = 0x0555;
+  int x = 0x0000;
   int y;
 
   asm volatile(
