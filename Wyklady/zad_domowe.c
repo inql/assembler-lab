@@ -19,7 +19,7 @@ int main(void)
         ".att_syntax prefix;"
         : "=r" (y)
         : "r" (s)
-	: "eax"
+				: "eax"
     );
 
     printf("s=%s, y=%i\n", s, y);
