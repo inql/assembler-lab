@@ -9,7 +9,7 @@ int main(void)
 				"mov eax, %0;"
 
 				"petla:"
-					"mov bl, [eax];"
+					"mov bl, byte ptr [eax];"
 					"cmp bl,0;"
 					"je wyjscie;"
 
@@ -21,7 +21,7 @@ int main(void)
 					"ja koniec_petli;"
 
 					"sub bl, 32;"
-					"mov [eax], bl;"
+					"mov byte ptr [eax], bl;"
 
 				"koniec_petli:"
 					"inc eax;"

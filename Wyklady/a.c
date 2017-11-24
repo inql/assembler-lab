@@ -14,13 +14,13 @@ int main(void)
         "mov eax, %1;"
 				"mov ebx, %2;"
 				"cmp eax, ebx;"
-				"jge skok;"
+				"jge skok;" //jump greater equal
 				"mov eax, ebx;"
 				"skok:"
 				"mov %0, eax;"
         ".att_syntax prefix;"
-        : "=r" (z)
-        : "r" (x), "r" (y)
+        : "=r" (z) // z - %0
+        : "r" (x), "r" (y) //x - %1, y - %2
 	: "eax", "ebx"
     );
 
